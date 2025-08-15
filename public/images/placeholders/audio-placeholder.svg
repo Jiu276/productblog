@@ -1,0 +1,34 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f3f4f6"/>
+  <rect x="10%" y="10%" width="80%" height="60%" rx="8" fill="#7c3aed"/>
+  
+  <!-- Headphones Icon -->
+  <g transform="translate(170, 85)">
+    <!-- Headband -->
+    <path d="M10 15 Q30 0 50 15" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <!-- Left Ear Cup -->
+    <ellipse cx="15" cy="20" rx="6" ry="8" fill="white"/>
+    <ellipse cx="15" cy="20" rx="4" ry="6" fill="#7c3aed"/>
+    <!-- Right Ear Cup -->
+    <ellipse cx="45" cy="20" rx="6" ry="8" fill="white"/>
+    <ellipse cx="45" cy="20" rx="4" ry="6" fill="#7c3aed"/>
+    <!-- Connecting Arms -->
+    <rect x="12" y="12" width="3" height="8" fill="white"/>
+    <rect x="45" y="12" width="3" height="8" fill="white"/>
+    <!-- Sound Waves -->
+    <path d="M5 20 Q0 15 5 10" fill="none" stroke="white" stroke-width="1" opacity="0.6"/>
+    <path d="M5 20 Q-2 15 5 10" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+    <path d="M55 20 Q60 15 55 10" fill="none" stroke="white" stroke-width="1" opacity="0.6"/>
+    <path d="M55 20 Q62 15 55 10" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <text x="50%" y="75%" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Audio Device
+  </text>
+  <text x="50%" y="85%" text-anchor="middle" fill="#ede9fe" font-family="Arial, sans-serif" font-size="12">
+    AUDIO EQUIPMENT
+  </text>
+  
+  <circle cx="15%" cy="25%" r="12" fill="white" opacity="0.8"/>
+  <circle cx="85%" cy="80%" r="15" fill="#5b21b6" opacity="0.6"/>
+</svg>

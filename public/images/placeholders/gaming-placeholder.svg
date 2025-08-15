@@ -1,0 +1,41 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f3f4f6"/>
+  <rect x="10%" y="10%" width="80%" height="60%" rx="8" fill="#ef4444"/>
+  
+  <!-- Gaming Controller Icon -->
+  <g transform="translate(170, 90)">
+    <!-- Controller Body -->
+    <ellipse cx="30" cy="25" rx="25" ry="15" fill="white"/>
+    <!-- D-Pad -->
+    <rect x="15" y="22" width="8" height="2" fill="#ef4444"/>
+    <rect x="18" y="19" width="2" height="8" fill="#ef4444"/>
+    <!-- Buttons -->
+    <circle cx="40" cy="20" r="3" fill="#ef4444"/>
+    <circle cx="45" cy="25" r="3" fill="#ef4444"/>
+    <circle cx="40" cy="30" r="3" fill="#ef4444"/>
+    <circle cx="35" cy="25" r="3" fill="#ef4444"/>
+    <!-- Triggers -->
+    <rect x="10" y="15" width="6" height="3" rx="1" fill="white"/>
+    <rect x="44" y="15" width="6" height="3" rx="1" fill="white"/>
+  </g>
+  
+  <!-- Gaming Elements -->
+  <g transform="translate(120, 60)">
+    <!-- Monitor -->
+    <rect x="0" y="0" width="40" height="25" rx="2" fill="white" opacity="0.8"/>
+    <rect x="2" y="2" width="36" height="21" fill="#1f2937"/>
+    <!-- Stand -->
+    <rect x="17" y="25" width="6" height="8" fill="white" opacity="0.8"/>
+    <rect x="12" y="33" width="16" height="2" fill="white" opacity="0.8"/>
+  </g>
+  
+  <text x="50%" y="75%" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Gaming Setup
+  </text>
+  <text x="50%" y="85%" text-anchor="middle" fill="#fee2e2" font-family="Arial, sans-serif" font-size="12">
+    GAMING GUIDE
+  </text>
+  
+  <circle cx="15%" cy="25%" r="12" fill="white" opacity="0.8"/>
+  <circle cx="85%" cy="80%" r="15" fill="#dc2626" opacity="0.6"/>
+</svg>

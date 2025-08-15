@@ -1,0 +1,30 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f3f4f6"/>
+  <rect x="10%" y="10%" width="80%" height="60%" rx="8" fill="#4f46e5"/>
+  
+  <!-- Smartphone Icon -->
+  <g transform="translate(180, 80)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="24" height="40" rx="4" fill="white"/>
+    <!-- Screen -->
+    <rect x="2" y="4" width="20" height="28" rx="2" fill="#1f2937"/>
+    <!-- Home Button -->
+    <circle cx="12" cy="36" r="2" fill="#4f46e5"/>
+    <!-- Camera -->
+    <circle cx="12" cy="2" r="1" fill="#6b7280"/>
+    <!-- Screen Elements -->
+    <rect x="4" y="6" width="16" height="2" fill="#4f46e5" opacity="0.8"/>
+    <rect x="4" y="9" width="12" height="2" fill="#4f46e5" opacity="0.6"/>
+    <rect x="4" y="12" width="14" height="2" fill="#4f46e5" opacity="0.4"/>
+  </g>
+  
+  <text x="50%" y="75%" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Smartphone
+  </text>
+  <text x="50%" y="85%" text-anchor="middle" fill="#e0e7ff" font-family="Arial, sans-serif" font-size="12">
+    MOBILE DEVICE
+  </text>
+  
+  <circle cx="15%" cy="25%" r="12" fill="white" opacity="0.8"/>
+  <circle cx="85%" cy="80%" r="15" fill="#3730a3" opacity="0.6"/>
+</svg>

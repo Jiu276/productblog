@@ -1,0 +1,64 @@
+{
+  "name": "product-blog",
+  "version": "1.0.0",
+  "description": "智能产品评测博客平台 - 专业的产品评测和推荐平台",
+  "main": "index.js",
+  "keywords": ["product", "review", "blog", "nextjs", "typescript", "tailwind"],
+  "author": "ProductBlog Team",
+  "license": "MIT",
+  "homepage": "https://productblog.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/product-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/product-blog/issues"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "export": "next build && next export",
+    "analyze": "cross-env ANALYZE=true next build",
+    "clean": "rm -rf .next out dist",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\""
+  },
+  "dependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.4.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^2.30.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.294.0",
+    "next": "^14.0.0",
+    "postcss": "^8.4.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-markdown": "^9.0.0",
+    "swiper": "^11.0.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

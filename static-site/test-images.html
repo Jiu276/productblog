@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test - ProductHub</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-test { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    
+    <div class="image-test">
+        <h2>Avatar SVG</h2>
+        <img src="assets/images/avatar.svg" alt="Avatar" width="50" height="50">
+        <p>Path: assets/images/avatar.svg</p>
+    </div>
+    
+    <div class="image-test">
+        <h2>Placeholder SVG</h2>
+        <img src="assets/images/placeholder.svg" alt="Placeholder" width="300">
+        <p>Path: assets/images/placeholder.svg</p>
+    </div>
+    
+    <div class="image-test">
+        <h2>iPhone Placeholder SVG</h2>
+        <img src="assets/images/iphone-placeholder.svg" alt="iPhone" width="300">
+        <p>Path: assets/images/iphone-placeholder.svg</p>
+    </div>
+    
+    <div class="image-test">
+        <h2>MacBook Placeholder SVG</h2>
+        <img src="assets/images/macbook-placeholder.svg" alt="MacBook" width="300">
+        <p>Path: assets/images/macbook-placeholder.svg</p>
+    </div>
+    
+    <div class="image-test">
+        <h2>From Articles Directory (using ../)</h2>
+        <p>Testing path that articles would use:</p>
+        <img src="../static-site/assets/images/avatar.svg" alt="Avatar from articles" width="50" height="50">
+        <p>Path: ../static-site/assets/images/avatar.svg</p>
+    </div>
+    
+    <script>
+        // Log image load events
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.onload = () => console.log(`Image ${index + 1} loaded successfully: ${img.src}`);
+            img.onerror = () => console.error(`Image ${index + 1} failed to load: ${img.src}`);
+        });
+    </script>
+</body>
+</html>

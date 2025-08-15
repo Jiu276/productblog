@@ -1,0 +1,48 @@
+<svg width="900" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="watch1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#374151;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow3">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg3)"/>
+  
+  <!-- Watch band -->
+  <rect x="420" y="120" width="60" height="160" rx="30" fill="#6b7280"/>
+  
+  <!-- Watch face -->
+  <rect x="400" y="150" width="100" height="100" rx="22" fill="url(#watch1)" filter="url(#shadow3)"/>
+  
+  <!-- Screen -->
+  <rect x="410" y="160" width="80" height="80" rx="18" fill="#000"/>
+  
+  <!-- Screen content - clock -->
+  <circle cx="450" cy="200" r="30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <line x1="450" y1="200" x2="450" y2="180" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="450" y1="200" x2="465" y2="200" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="450" cy="200" r="3" fill="white"/>
+  
+  <!-- Digital crown -->
+  <rect x="500" y="175" width="8" height="15" rx="4" fill="#9ca3af"/>
+  
+  <!-- Side button -->
+  <rect x="500" y="195" width="6" height="10" rx="3" fill="#6b7280"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="150" r="40" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="700" cy="250" r="30" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="150" cy="300" r="25" fill="rgba(255,255,255,0.12)"/>
+  
+  <!-- Text -->
+  <text x="450" y="320" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#92400e" text-anchor="middle">Apple Watch Series 9</text>
+  <text x="450" y="345" font-family="Arial, sans-serif" font-size="14" fill="#b45309" text-anchor="middle">Your essential companion</text>
+</svg>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - ProductHub</title>
+    <meta name="description" content="Browse all ProductHub featured products, including professional reviews and recommendations for smartphones, laptops, smart home devices, and more.">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>">
+    <style>
+        .filter-section {
+            background: white;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--gray-200);
+            position: sticky;
+            top: 70px;
+            z-index: 50;
+        }
+        
+        .filters {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .filter-group label {
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+        
+        .filter-select {
+            padding: 8px 12px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            background: white;
+            color: var(--gray-700);
+            cursor: pointer;
+        }
+        
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary-500);
+        }
+        
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .results-count {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+        }
+        
+        .category-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .category-tag {
+            padding: 8px 16px;
+            background: var(--gray-100);
+            color: var(--gray-700);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .category-tag:hover, .category-tag.active {
+            background: var(--primary-600);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    ProductHub
+                    <span class="logo-subtitle">Professional Reviews</span>
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="products.html" style="color: var(--primary-600);">Products</a>
+                    <a href="blog.html">Reviews</a>
+                    <a href="about.html">About</a>
+                </nav>
+                
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="hero" style="padding: 60px 0;">
+        <div class="container">
+            <h1 class="fade-in" style="font-size: 2.5rem;">All Products</h1>
+            <p class="fade-in">Discover the latest and most popular tech products, find the perfect choice for you</p>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-section" style="padding: 40px 0;">
+        <div class="container">
+            <div class="search-container fade-in">
+                <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search product names, brands, or features..." id="searchInput">
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="smartphones">Smartphones</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="tablets">Tablets</option>
+                        <option value="wearables">Wearables</option>
+                        <option value="audio">Audio Devices</option>
+                        <option value="home-appliances">Smart Home</option>
+                        <option value="cameras">Cameras</option>
+                        <option value="automotive">Automotive</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="priceFilter">Price:</label>
+                    <select id="priceFilter" class="filter-select">
+                        <option value="">All Prices</option>
+                        <option value="0-100">Under $100</option>
+                        <option value="100-500">$100-500</option>
+                        <option value="500-1000">$500-1000</option>
+                        <option value="1000-5000">$1000-5000</option>
+                        <option value="5000+">Over $5000</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sortFilter">Sort by:</label>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products List -->
+    <section class="products-section">
+        <div class="container-xl">
+            <!-- Category Tags -->
+            <div class="category-tags fade-in">
+                <a href="#" class="category-tag active" data-category="">All</a>
+                <a href="#" class="category-tag" data-category="smartphones">Smartphones</a>
+                <a href="#" class="category-tag" data-category="laptops">Laptops</a>
+                <a href="#" class="category-tag" data-category="wearables">Wearables</a>
+                <a href="#" class="category-tag" data-category="audio">Audio</a>
+                <a href="#" class="category-tag" data-category="home-appliances">Smart Home</a>
+                <a href="#" class="category-tag" data-category="cameras">Cameras</a>
+                <a href="#" class="category-tag" data-category="automotive">Automotive</a>
+            </div>
+
+            <!-- Products Header Info -->
+            <div class="products-header fade-in">
+                <div class="results-count">
+                    Showing <span id="resultsCount">16</span> products
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsContainer">
+                <!-- Same product cards as in Chinese version but with English content -->
+                <!-- I'll include a few key products here -->
+                
+                <!-- iPhone 15 Pro -->
+                <div class="product-card fade-in" data-category="smartphones" data-price="999" data-rating="4.8" data-date="2023-09-15">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&h=300&q=80" 
+                             alt="iPhone 15 Pro" class="product-image">
+                        <div class="discount-badge">-17%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">iPhone 15 Pro</h3>
+                        <p class="product-description">Flagship smartphone with A17 Pro chip, titanium design, professional camera system with Action Button and USB-C support</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">4.8 (1,250 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$999</span>
+                            <span class="original-price">$1,199</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro -->
+                <div class="product-card fade-in" data-category="laptops" data-price="2399" data-rating="4.7" data-date="2023-10-30">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=400&h=300&q=80" 
+                             alt="MacBook Pro 16" class="product-image">
+                        <div class="discount-badge">-13%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">MacBook Pro 16" M3 Pro</h3>
+                        <p class="product-description">Professional laptop with M3 Pro chip, 16-inch Liquid Retina XDR display, perfect for creative professionals and developers</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-text">4.7 (890 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$2,399</span>
+                            <span class="original-price">$2,799</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue with more products... -->
+                <!-- Tesla Model Y -->
+                <div class="product-card fade-in" data-category="automotive" data-price="50490" data-rating="4.7" data-date="2023-11-01">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=400&h=300&q=80" 
+                             alt="Tesla Model Y" class="product-image">
+                        <div class="discount-badge">New</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Tesla Model Y Long Range</h3>
+                        <p class="product-description">Electric SUV with 330-mile range, Autopilot features, minimalist interior design, and Supercharger network support</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-text">4.7 (3,250 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$50,490</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sony Camera -->
+                <div class="product-card fade-in" data-category="cameras" data-price="3899" data-rating="4.9" data-date="2023-07-20">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&h=600&fit=crop" 
+                             alt="Sony A7R V" class="product-image">
+                        <div class="discount-badge">-22%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Sony α7R V Full-Frame Camera</h3>
+                        <p class="product-description">61MP sensor, 8K video recording, AI-powered autofocus, professional imaging tool with 5-axis stabilization</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">4.9 (920 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$3,899</span>
+                            <span class="original-price">$4,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ProductHub</h3>
+                    <p>Professional product review and recommendation platform, dedicated to providing users with the most authentic and valuable product experiences and purchase advice.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product Categories</h4>
+                    <ul>
+                        <li><a href="#smartphones">Smartphones</a></li>
+                        <li><a href="#laptops">Laptops</a></li>
+                        <li><a href="#home-appliances">Smart Home</a></li>
+                        <li><a href="#wearables">Wearables</a></li>
+                        <li><a href="#audio">Audio Devices</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Content & Services</h4>
+                    <ul>
+                        <li><a href="blog.html">Review Articles</a></li>
+                        <li><a href="blog.html#comparison">Product Comparisons</a></li>
+                        <li><a href="blog.html#guides">Buying Guides</a></li>
+                        <li><a href="blog.html#news">Tech News</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li>Email: contact@producthub.com</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: Tech District, San Francisco, CA</li>
+                        <li>Hours: Monday-Friday 9:00-18:00 PST</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ProductHub. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Products data and functionality
+        let allProducts = [];
+        let filteredProducts = [];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            allProducts = Array.from(document.querySelectorAll('.product-card'));
+            filteredProducts = [...allProducts];
+            updateResultsCount();
+            
+            // Bind events
+            bindEvents();
+        });
+
+        function bindEvents() {
+            // Search functionality
+            document.getElementById('searchInput').addEventListener('input', handleSearch);
+            
+            // Filter functionality
+            document.getElementById('categoryFilter').addEventListener('change', handleFilter);
+            document.getElementById('priceFilter').addEventListener('change', handleFilter);
+            document.getElementById('sortFilter').addEventListener('change', handleSort);
+            
+            // Category tags
+            document.querySelectorAll('.category-tag').forEach(tag => {
+                tag.addEventListener('click', handleCategoryTag);
+            });
+            
+            // Mobile menu
+            document.querySelector('.mobile-menu-toggle').addEventListener('click', toggleMobileMenu);
+        }
+
+        function handleSearch(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            filteredProducts = allProducts.filter(card => {
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                const description = card.querySelector('.product-description').textContent.toLowerCase();
+                return title.includes(searchTerm) || description.includes(searchTerm);
+            });
+            
+            updateDisplay();
+        }
+
+        function handleFilter() {
+            const category = document.getElementById('categoryFilter').value;
+            const priceRange = document.getElementById('priceFilter').value;
+            
+            filteredProducts = allProducts.filter(card => {
+                let matches = true;
+                
+                // Category filter
+                if (category && card.dataset.category !== category) {
+                    matches = false;
+                }
+                
+                // Price filter
+                if (priceRange && matches) {
+                    const price = parseInt(card.dataset.price);
+                    if (priceRange === '0-100' && price >= 100) matches = false;
+                    if (priceRange === '100-500' && (price < 100 || price >= 500)) matches = false;
+                    if (priceRange === '500-1000' && (price < 500 || price >= 1000)) matches = false;
+                    if (priceRange === '1000-5000' && (price < 1000 || price >= 5000)) matches = false;
+                    if (priceRange === '5000+' && price < 5000) matches = false;
+                }
+                
+                return matches;
+            });
+            
+            updateDisplay();
+        }
+
+        function handleSort() {
+            const sortBy = document.getElementById('sortFilter').value;
+            
+            filteredProducts.sort((a, b) => {
+                switch (sortBy) {
+                    case 'price-low':
+                        return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+                    case 'price-high':
+                        return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+                    case 'rating':
+                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                    case 'newest':
+                        return new Date(b.dataset.date) - new Date(a.dataset.date);
+                    default: // popular
+                        return 0;
+                }
+            });
+            
+            updateDisplay();
+        }
+
+        function handleCategoryTag(e) {
+            e.preventDefault();
+            const category = e.target.dataset.category;
+            
+            // Update active tag
+            document.querySelectorAll('.category-tag').forEach(tag => {
+                tag.classList.remove('active');
+            });
+            e.target.classList.add('active');
+            
+            // Update dropdown
+            document.getElementById('categoryFilter').value = category;
+            
+            // Filter products
+            if (category === '') {
+                filteredProducts = [...allProducts];
+            } else {
+                filteredProducts = allProducts.filter(card => card.dataset.category === category);
+            }
+            
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            // Hide all products
+            allProducts.forEach(card => {
+                card.style.display = 'none';
+            });
+            
+            // Show filtered products
+            const container = document.getElementById('productsContainer');
+            container.innerHTML = '';
+            
+            filteredProducts.forEach(card => {
+                card.style.display = 'block';
+                container.appendChild(card);
+            });
+            
+            updateResultsCount();
+        }
+
+        function updateResultsCount() {
+            document.getElementById('resultsCount').textContent = filteredProducts.length;
+        }
+
+        function toggleMobileMenu() {
+            const nav = document.querySelector('.nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Product card interactions
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn-product')) {
+                e.preventDefault();
+                const productTitle = e.target.closest('.product-card').querySelector('.product-title').textContent;
+                alert(`Redirecting to ${productTitle} details page`);
+            }
+            
+            if (e.target.closest('.btn-external')) {
+                e.preventDefault();
+                const productTitle = e.target.closest('.product-card').querySelector('.product-title').textContent;
+                if(confirm(`Visit official store to purchase ${productTitle}?`)) {
+                    window.open('#', '_blank');
+                }
+            }
+        });
+
+        // Page load animation
+        window.addEventListener('load', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

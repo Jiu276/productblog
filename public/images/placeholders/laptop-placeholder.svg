@@ -1,0 +1,31 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f3f4f6"/>
+  <rect x="10%" y="10%" width="80%" height="60%" rx="8" fill="#059669"/>
+  
+  <!-- Laptop Icon -->
+  <g transform="translate(160, 80)">
+    <!-- Screen -->
+    <rect x="5" y="0" width="30" height="20" rx="2" fill="white"/>
+    <rect x="7" y="2" width="26" height="16" fill="#1f2937"/>
+    <!-- Keyboard Base -->
+    <rect x="0" y="20" width="40" height="8" rx="1" fill="white"/>
+    <!-- Keyboard Keys -->
+    <rect x="3" y="22" width="34" height="4" fill="#059669" opacity="0.3"/>
+    <!-- Trackpad -->
+    <rect x="16" y="23" width="8" height="3" rx="1" fill="#d1fae5"/>
+    <!-- Screen Content -->
+    <rect x="9" y="4" width="22" height="2" fill="#059669" opacity="0.8"/>
+    <rect x="9" y="7" width="18" height="2" fill="#059669" opacity="0.6"/>
+    <rect x="9" y="10" width="20" height="2" fill="#059669" opacity="0.4"/>
+  </g>
+  
+  <text x="50%" y="75%" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Laptop
+  </text>
+  <text x="50%" y="85%" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-size="12">
+    PORTABLE COMPUTER
+  </text>
+  
+  <circle cx="15%" cy="25%" r="12" fill="white" opacity="0.8"/>
+  <circle cx="85%" cy="80%" r="15" fill="#047857" opacity="0.6"/>
+</svg>

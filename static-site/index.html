@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductHub - Professional Product Reviews & Recommendations</title>
+    <meta name="description" content="ProductHub is a professional product review platform providing authentic product experiences and purchase recommendations covering smartphones, laptops, smart home devices, and more.">
+    <meta name="keywords" content="product reviews,buying guide,product recommendations,smartphones,laptops,smart home">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    ProductHub
+                    <span class="logo-subtitle">Professional Reviews</span>
+                </a>
+                
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="blog.html">Reviews</a>
+                    <a href="about.html">About</a>
+                </nav>
+                
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Professional Product Review Platform</h1>
+            <p class="fade-in">Providing you with authentic product experiences and purchase recommendations</p>
+            <div class="hero-buttons fade-in">
+                <a href="products.html" class="btn btn-primary">Browse Products</a>
+                <a href="blog.html" class="btn btn-secondary">Read Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container fade-in">
+                <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search product names, brands, or features..." id="searchInput">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products-section">
+        <div class="container-xl">
+            <h2 class="section-title fade-in">Featured Product Recommendations</h2>
+            <div class="section-subtitle fade-in"></div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- iPhone 15 Pro -->
+                <div class="product-card fade-in">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&h=600&fit=crop" 
+                             alt="iPhone 15 Pro" class="product-image">
+                        <div class="discount-badge">-17%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">iPhone 15 Pro</h3>
+                        <p class="product-description">Flagship smartphone with A17 Pro chip, titanium design, and professional camera system</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">4.8 (1,250 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$999</span>
+                            <span class="original-price">$1,199</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro -->
+                <div class="product-card fade-in">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&h=600&fit=crop" 
+                             alt="MacBook Pro 16" class="product-image">
+                        <div class="discount-badge">-13%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">MacBook Pro 16" M3 Pro</h3>
+                        <p class="product-description">Professional laptop with M3 Pro chip, 16-inch Liquid Retina XDR display</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-text">4.7 (890 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$2,399</span>
+                            <span class="original-price">$2,799</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apple Watch -->
+                <div class="product-card fade-in">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=600&fit=crop" 
+                             alt="Apple Watch Series 9" class="product-image">
+                        <div class="discount-badge">-25%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Apple Watch Series 9</h3>
+                        <p class="product-description">S9 chip, Always-On Retina display, advanced health features</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-text">4.5 (2,150 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$299</span>
+                            <span class="original-price">$399</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AirPods Pro -->
+                <div class="product-card fade-in">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=800&h=600&fit=crop" 
+                             alt="AirPods Pro 2" class="product-image">
+                        <div class="discount-badge">-20%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">AirPods Pro (2nd gen)</h3>
+                        <p class="product-description">H2 chip, Adaptive Transparency, Spatial Audio, USB-C charging case</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-text">4.6 (1,840 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$199</span>
+                            <span class="original-price">$249</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iPad Pro -->
+                <div class="product-card fade-in">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&h=600&fit=crop" 
+                             alt="iPad Pro" class="product-image">
+                        <div class="discount-badge">-18%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">iPad Pro 12.9" M2</h3>
+                        <p class="product-description">M2 chip, 12.9-inch Liquid Retina XDR display, Apple Pencil support</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">4.8 (1,560 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$1,099</span>
+                            <span class="original-price">$1,299</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dyson Vacuum -->
+                <div class="product-card fade-in">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1628744876497-eb30460be9f6?w=800&h=600&fit=crop" 
+                             alt="Dyson V15 Detect" class="product-image">
+                        <div class="discount-badge">-15%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Dyson V15 Detect Cordless Vacuum</h3>
+                        <p class="product-description">Laser dust detection, intelligent sensing cleaning, 60-minute runtime</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-text">4.4 (780 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$649</span>
+                            <span class="original-price">$749</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tesla Model Y -->
+                <div class="product-card fade-in">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=600&fit=crop" 
+                             alt="Tesla Model Y" class="product-image">
+                        <div class="discount-badge">New</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Tesla Model Y Long Range</h3>
+                        <p class="product-description">Electric SUV, 330-mile range, Autopilot features, minimalist interior design</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★☆</div>
+                            <span class="rating-text">4.7 (3,250 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$50,490</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sony Camera -->
+                <div class="product-card fade-in">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&h=600&fit=crop" 
+                             alt="Sony A7R V" class="product-image">
+                        <div class="discount-badge">-22%</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Sony α7R V Full-Frame Camera</h3>
+                        <p class="product-description">61MP sensor, 8K video recording, AI-powered autofocus, professional imaging tool</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">4.9 (920 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$3,899</span>
+                            <span class="original-price">$4,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-product">View Details</button>
+                            <button class="btn-external">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="products.html" class="btn btn-primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="articles-section" style="padding: 80px 0; background: var(--gray-50);">
+        <div class="container-xl">
+            <h2 class="section-title fade-in">Featured Review Articles</h2>
+            
+            <div class="articles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px;">
+                <!-- DIY Wall Art - Featured Article -->
+                <div class="article-card fade-in" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="article-image-container" style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop" 
+                             alt="DIY Wall Art Creative Ideas" class="article-image" style="width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+                        <div class="article-category-badge" style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">DIY & Creativity</div>
+                    </div>
+                    <div class="article-content" style="padding: 25px;">
+                        <div class="article-meta" style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--gray-500); font-size: 0.9rem;">
+                            <span>Feb 6</span>
+                            <span>•</span>
+                            <span>12 min read</span>
+                        </div>
+                        <h3 class="article-title" style="font-size: 1.3rem; font-weight: 600; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4;">DIY Wall Art: Creative Ways to Personalize Your Home</h3>
+                        <p class="article-excerpt" style="color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            Transform your living space with stunning, budget-friendly wall art projects. From abstract canvas paintings to upcycled materials, discover creative techniques that will make your walls the focal point of every room.
+                        </p>
+                        <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="author-info" style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=30&h=30&fit=crop&crop=face" 
+                                     alt="Emily Parker" class="author-avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                                <span class="author-name" style="font-size: 0.9rem; color: var(--gray-700); font-weight: 500;">Emily Parker</span>
+                            </div>
+                            <a href="articles/diy-wall-art-creative-home-decoration.html" class="read-more-btn" style="color: var(--primary-600); text-decoration: none; font-weight: 500; transition: color 0.2s;">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 1 -->
+                <div class="article-card fade-in" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="article-image-container" style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&h=600&fit=crop" 
+                             alt="iPhone 15 Pro Review" class="article-image" style="width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+                        <div class="article-category-badge" style="position: absolute; top: 15px; left: 15px; background: var(--primary-600); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">In-depth Review</div>
+                    </div>
+                    <div class="article-content" style="padding: 25px;">
+                        <div class="article-meta" style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--gray-500); font-size: 0.9rem;">
+                            <span>Jan 15</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="article-title" style="font-size: 1.3rem; font-weight: 600; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4;">iPhone 15 Pro In-depth Review: Complete Upgrade Under Titanium Design</h3>
+                        <p class="article-excerpt" style="color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            The performance leap brought by the A17 Pro chip, the lightweight experience of titanium material, and the professional-grade camera system upgrades make the iPhone 15 Pro the most noteworthy flagship product this year.
+                        </p>
+                        <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="author-info" style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b77c?w=30&h=30&fit=crop&crop=face" 
+                                     alt="John Smith" class="author-avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                                <span class="author-name" style="font-size: 0.9rem; color: var(--gray-700); font-weight: 500;">John Smith</span>
+                            </div>
+                            <a href="articles/iphone-15-pro-review.html" class="read-more-btn" style="color: var(--primary-600); text-decoration: none; font-weight: 500; transition: color 0.2s;">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="article-card fade-in" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="article-image-container" style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&h=600&fit=crop" 
+                             alt="MacBook Pro M3 Review" class="article-image" style="width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+                        <div class="article-category-badge" style="position: absolute; top: 15px; left: 15px; background: var(--primary-600); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">In-depth Review</div>
+                    </div>
+                    <div class="article-content" style="padding: 25px;">
+                        <div class="article-meta" style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--gray-500); font-size: 0.9rem;">
+                            <span>Jan 10</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="article-title" style="font-size: 1.3rem; font-weight: 600; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4;">MacBook Pro M3 Pro Review: The Ideal Choice for Professional Users</h3>
+                        <p class="article-excerpt" style="color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            The M3 Pro chip brings significant performance improvements to MacBook Pro, excelling in professional applications like video editing and 3D rendering, with notable battery life improvements.
+                        </p>
+                        <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="author-info" style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b77c?w=30&h=30&fit=crop&crop=face" 
+                                     alt="John Smith" class="author-avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                                <span class="author-name" style="font-size: 0.9rem; color: var(--gray-700); font-weight: 500;">John Smith</span>
+                            </div>
+                            <a href="articles/macbook-pro-m3-review.html" class="read-more-btn" style="color: var(--primary-600); text-decoration: none; font-weight: 500; transition: color 0.2s;">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="article-card fade-in" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="article-image-container" style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=600&fit=crop" 
+                             alt="iPhone vs Galaxy Comparison" class="article-image" style="width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+                        <div class="article-category-badge" style="position: absolute; top: 15px; left: 15px; background: #f59e0b; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Comparison</div>
+                    </div>
+                    <div class="article-content" style="padding: 25px;">
+                        <div class="article-meta" style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--gray-500); font-size: 0.9rem;">
+                            <span>Jan 8</span>
+                            <span>•</span>
+                            <span>10 min read</span>
+                        </div>
+                        <h3 class="article-title" style="font-size: 1.3rem; font-weight: 600; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4;">iPhone 15 Pro vs Galaxy S24 Ultra: Ultimate Flagship Smartphone Duel</h3>
+                        <p class="article-excerpt" style="color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            Two 2024 flagship products from Android and iOS, each with their own advantages in design, performance, photography, and battery life. Through detailed comparison testing, we analyze which better suits your needs.
+                        </p>
+                        <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="author-info" style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop&crop=face" 
+                                     alt="Emily Chen" class="author-avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                                <span class="author-name" style="font-size: 0.9rem; color: var(--gray-700); font-weight: 500;">Emily Chen</span>
+                            </div>
+                            <a href="articles/iphone-vs-galaxy-comparison.html" class="read-more-btn" style="color: var(--primary-600); text-decoration: none; font-weight: 500; transition: color 0.2s;">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="article-card fade-in" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="article-image-container" style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=800&h=600&fit=crop" 
+                             alt="Smartwatch Buying Guide" class="article-image" style="width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+                        <div class="article-category-badge" style="position: absolute; top: 15px; left: 15px; background: #10b981; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Buying Guide</div>
+                    </div>
+                    <div class="article-content" style="padding: 25px;">
+                        <div class="article-meta" style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--gray-500); font-size: 0.9rem;">
+                            <span>Jan 5</span>
+                            <span>•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="article-title" style="font-size: 1.3rem; font-weight: 600; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4;">2024 Smartwatch Buying Guide: How to Choose the Right Watch for You</h3>
+                        <p class="article-excerpt" style="color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            The smartwatch market has numerous products, from Apple Watch to Garmin, from sports-focused to all-around types. This guide helps you find the most suitable choice based on functionality needs and budget considerations.
+                        </p>
+                        <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="author-info" style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=30&h=30&fit=crop&crop=face" 
+                                     alt="Lisa Snow" class="author-avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                                <span class="author-name" style="font-size: 0.9rem; color: var(--gray-700); font-weight: 500;">Lisa Snow</span>
+                            </div>
+                            <a href="articles/smartwatch-buying-guide.html" class="read-more-btn" style="color: var(--primary-600); text-decoration: none; font-weight: 500; transition: color 0.2s;">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="article-card fade-in" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="article-image-container" style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=800&h=600&fit=crop" 
+                             alt="AirPods Pro 2 Review" class="article-image" style="width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+                        <div class="article-category-badge" style="position: absolute; top: 15px; left: 15px; background: var(--primary-600); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">In-depth Review</div>
+                    </div>
+                    <div class="article-content" style="padding: 25px;">
+                        <div class="article-meta" style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--gray-500); font-size: 0.9rem;">
+                            <span>Jan 1</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="article-title" style="font-size: 1.3rem; font-weight: 600; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4;">AirPods Pro 2nd Gen Review: Perfect Balance of Noise Cancellation and Sound Quality</h3>
+                        <p class="article-excerpt" style="color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            The addition of H2 chip brings qualitative improvement to AirPods Pro 2nd gen noise cancellation. Through professional audio testing, noise cancellation depth improved by about 2x compared to first generation.
+                        </p>
+                        <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="author-info" style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b77c?w=30&h=30&fit=crop&crop=face" 
+                                     alt="John Smith" class="author-avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                                <span class="author-name" style="font-size: 0.9rem; color: var(--gray-700); font-weight: 500;">John Smith</span>
+                            </div>
+                            <a href="articles/airpods-pro-2-review.html" class="read-more-btn" style="color: var(--primary-600); text-decoration: none; font-weight: 500; transition: color 0.2s;">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="article-card fade-in" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="article-image-container" style="position: relative; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=600&fit=crop" 
+                             alt="Smart Home Setup Tutorial" class="article-image" style="width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s ease;">
+                        <div class="article-category-badge" style="position: absolute; top: 15px; left: 15px; background: #06b6d4; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Tutorial</div>
+                    </div>
+                    <div class="article-content" style="padding: 25px;">
+                        <div class="article-meta" style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; color: var(--gray-500); font-size: 0.9rem;">
+                            <span>Dec 28</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="article-title" style="font-size: 1.3rem; font-weight: 600; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4;">Smart Home Beginner's Guide: Building Smart Living from Scratch</h3>
+                        <p class="article-excerpt" style="color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            Want to build a smart home but don't know where to start? This article gradually introduces smart lighting, security systems, environmental control device selection and setup methods from choosing smart home platforms.
+                        </p>
+                        <div class="article-footer" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="author-info" style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=30&h=30&fit=crop&crop=face" 
+                                     alt="Lisa Snow" class="author-avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                                <span class="author-name" style="font-size: 0.9rem; color: var(--gray-700); font-weight: 500;">Lisa Snow</span>
+                            </div>
+                            <a href="articles/smart-home-tutorial.html" class="read-more-btn" style="color: var(--primary-600); text-decoration: none; font-weight: 500; transition: color 0.2s;">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4" style="text-align: center; margin-top: 40px;">
+                <a href="blog.html" class="btn btn-primary" style="display: inline-block; background: var(--primary-600); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: all 0.2s;">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-intro fade-in">
+                <h2>Why Choose ProductHub</h2>
+                <p>Professional, objective, and trustworthy product review platform</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Professional Reviews</h3>
+                    <p class="feature-description">In-depth experience with every product, from performance testing to user experience, providing the most objective and comprehensive review reports</p>
+                </div>
+                
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fast Updates</h3>
+                    <p class="feature-description">First to bring you the latest product review content, keeping up with tech trends without missing any important releases</p>
+                </div>
+                
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">User-Centered</h3>
+                    <p class="feature-description">Always centered on user needs, providing the most valuable purchase recommendations to make every dollar worth it</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ProductHub</h3>
+                    <p>Professional product review and recommendation platform, dedicated to providing users with the most authentic and valuable product experiences and purchase advice.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product Categories</h4>
+                    <ul>
+                        <li><a href="products.html#smartphones">Smartphones</a></li>
+                        <li><a href="products.html#laptops">Laptops</a></li>
+                        <li><a href="products.html#home-appliances">Smart Home</a></li>
+                        <li><a href="products.html#wearables">Wearables</a></li>
+                        <li><a href="products.html#audio">Audio Devices</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Content & Services</h4>
+                    <ul>
+                        <li><a href="blog.html">Review Articles</a></li>
+                        <li><a href="blog.html#comparison">Product Comparisons</a></li>
+                        <li><a href="blog.html#guides">Buying Guides</a></li>
+                        <li><a href="blog.html#tutorials">DIY & Tutorials</a></li>
+                        <li><a href="blog.html#news">Tech News</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li>Email: contact@producthub.com</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: Tech District, San Francisco, CA</li>
+                        <li>Hours: Monday-Friday 9:00-18:00 PST</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ProductHub. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                const description = card.querySelector('.product-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = searchTerm === '' ? 'block' : 'none';
+                }
+            });
+        });
+
+        // Mobile menu
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Page load animation
+        window.addEventListener('load', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Product card interactions
+        document.querySelectorAll('.btn-product').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+                alert(`Redirecting to ${productTitle} details page`);
+            });
+        });
+
+        // External link interactions
+        document.querySelectorAll('.btn-external').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+                if(confirm(`Visit official store to purchase ${productTitle}?`)) {
+                    window.open('#', '_blank');
+                }
+            });
+        });
+
+        // Article card hover effects
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.15)';
+                const image = this.querySelector('.article-image');
+                if (image) {
+                    image.style.transform = 'scale(1.05)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.08)';
+                const image = this.querySelector('.article-image');
+                if (image) {
+                    image.style.transform = 'scale(1)';
+                }
+            });
+        });
+
+        // Article read more button hover effects
+        document.querySelectorAll('.read-more-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.color = 'var(--primary-700)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.color = 'var(--primary-600)';
+            });
+        });
+    </script>
+</body>
+</html>
