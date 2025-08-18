@@ -2,7 +2,6 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { headers } from 'next/headers'
 import Link from 'next/link'
 import { Search, Clock, Tag, Star } from 'lucide-react'
 import { search, SearchResult } from '@/lib/search'
