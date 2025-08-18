@@ -82,7 +82,7 @@ export default async function BlogPage() {
                         {article.author.name}
                       </p>
                       <p className="text-xs text-gray-500">
-                        {new Date(article.publishedAt).toLocaleDateString('zh-CN')}
+                        {new Date(article.publishedAt).toLocaleDateString('en-US')}
                       </p>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ export default async function BlogPage() {
                     href={`/blog/${article.slug}`}
                     className="text-primary-600 hover:text-primary-700 text-sm font-medium"
                   >
-                    阅读更多 →
+                    Read More →
                   </Link>
                 </div>
               </div>

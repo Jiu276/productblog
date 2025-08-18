@@ -36,9 +36,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Breadcrumb */}
         <nav className="mb-8">
           <ol className="flex items-center space-x-2 text-sm text-gray-500">
-            <li><Link href="/" className="hover:text-primary-600">首页</Link></li>
+            <li><Link href="/" className="hover:text-primary-600">Home</Link></li>
             <li>/</li>
-            <li><Link href="/blog" className="hover:text-primary-600">博客</Link></li>
+            <li><Link href="/blog" className="hover:text-primary-600">Blog</Link></li>
             <li>/</li>
             <li className="text-gray-900">{article.title}</li>
           </ol>
@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             
             <div className="text-sm text-gray-500">
-              {article.readTime} 分钟阅读
+              {article.readTime} min read
             </div>
           </div>
         </header>
@@ -113,7 +113,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Tags */}
         {article.tags.length > 0 && (
           <div className="mb-8 pb-8 border-b border-gray-200">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">标签</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Tags</h3>
             <div className="flex flex-wrap gap-2">
               {article.tags.map((tag) => (
                 <span
@@ -130,7 +130,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Related Articles */}
         {relatedArticles.length > 0 && (
           <section className="mt-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">相关文章</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedArticles.map((relatedArticle) => (
                 <article key={relatedArticle.id} className="bg-white rounded-lg shadow-sm border overflow-hidden hover:shadow-md transition-shadow">
@@ -169,7 +169,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       href={`/blog/${relatedArticle.slug}`}
                       className="text-primary-600 hover:text-primary-700 text-sm font-medium"
                     >
-                      阅读更多 →
+                      Read More →
                     </Link>
                   </div>
                 </article>

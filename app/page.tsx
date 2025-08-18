@@ -124,7 +124,7 @@ export default async function HomePage() {
                           href={`/blog/${article.slug}`}
                           className="text-primary-600 hover:text-primary-700 text-sm font-medium"
                         >
-                          阅读更多 →
+                          Read More →
                         </Link>
                       </div>
                     </div>

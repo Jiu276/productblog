@@ -48,8 +48,8 @@ The iPhone 15 Pro represents a comprehensive and solid upgrade. The titanium des
       name: 'Tech Editor',
       avatar: '/images/authors/tech-editor.svg'
     },
-    publishedAt: '2024-01-15T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
+    publishedAt: '2025-08-15T00:00:00Z',
+    updatedAt: '2025-08-15T00:00:00Z',
     readTime: 8,
     seoTitle: 'iPhone 15 Pro In-Depth Review - Titanium Design & A17 Pro Chip Analysis',
     seoDescription: 'Detailed iPhone 15 Pro review with in-depth analysis of A17 Pro chip performance, titanium design, 48MP camera system, Action Button functionality, and more.'
@@ -93,8 +93,8 @@ MacBook Pro M3 is the ideal choice for professional users. Its powerful performa
       name: 'Pro Editor',
       avatar: '/images/authors/pro-editor.svg'
     },
-    publishedAt: '2024-01-12T00:00:00Z',
-    updatedAt: '2024-01-12T00:00:00Z',
+    publishedAt: '2025-07-12T00:00:00Z',
+    updatedAt: '2025-07-12T00:00:00Z',
     readTime: 6,
     seoTitle: 'MacBook Pro M3 Detailed Review - Performance & Battery Analysis',
     seoDescription: 'Comprehensive review of MacBook Pro with M3 chip focusing on performance, battery life, and professional workflows.'
@@ -160,8 +160,8 @@ Choosing a smartwatch requires comprehensive consideration of usage needs, budge
       name: 'Guide Editor',
       avatar: '/images/authors/guide-editor.svg'
     },
-    publishedAt: '2024-01-10T00:00:00Z',
-    updatedAt: '2024-01-10T00:00:00Z',
+    publishedAt: '2025-06-10T00:00:00Z',
+    updatedAt: '2025-06-10T00:00:00Z',
     readTime: 5,
     seoTitle: '2024 Smartwatch Buying Guide - Complete Selection Strategy',
     seoDescription: 'Complete smartwatch buying guide to help you find the perfect device among numerous options.'
@@ -213,8 +213,8 @@ AirPods Pro 2 shows clear improvements in all aspects, especially in noise cance
       name: 'Audio Editor',
       avatar: '/images/authors/audio-editor.svg'
     },
-    publishedAt: '2024-01-08T00:00:00Z',
-    updatedAt: '2024-01-08T00:00:00Z',
+    publishedAt: '2025-05-08T00:00:00Z',
+    updatedAt: '2025-05-08T00:00:00Z',
     readTime: 4,
     seoTitle: 'AirPods Pro 2 Detailed Review - Noise Cancellation & Sound Quality Analysis',
     seoDescription: 'Comprehensive review of AirPods Pro 2 improvements in sound quality, noise cancellation, and smart features.'
@@ -328,8 +328,8 @@ Remember, the best smart home system isn't the one with the most devices, but th
       name: 'Home Editor',
       avatar: '/images/authors/home-editor.svg'
     },
-    publishedAt: '2024-01-06T00:00:00Z',
-    updatedAt: '2024-01-06T00:00:00Z',
+    publishedAt: '2025-04-06T00:00:00Z',
+    updatedAt: '2025-04-06T00:00:00Z',
     readTime: 12,
     seoTitle: 'Smart Home Beginner\'s Guide - Building Your Intelligent Home from Scratch',
     seoDescription: 'Detailed smart home setup tutorial to help newcomers quickly get started with smart home ecosystems.'
@@ -491,8 +491,8 @@ Remember, the best gaming setup is one that enhances your gaming experience and 
       name: 'Gaming Editor',
       avatar: '/images/authors/gaming-editor.svg'
     },
-    publishedAt: '2024-01-04T00:00:00Z',
-    updatedAt: '2024-01-04T00:00:00Z',
+    publishedAt: '2025-03-04T00:00:00Z',
+    updatedAt: '2025-03-04T00:00:00Z',
     readTime: 10,
     seoTitle: 'Ultimate Gaming Setup Guide 2024 - Build Your Dream Gaming Station',
     seoDescription: 'Complete guide to building the perfect gaming setup, from hardware selection to ergonomic considerations.'

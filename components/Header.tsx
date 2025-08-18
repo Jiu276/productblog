@@ -58,7 +58,7 @@ export default function Header({ siteTitle, logo }: HeaderProps) {
             <button 
               onClick={handleSearchClick}
               className="p-2 text-gray-600 hover:text-primary-600 transition-colors"
-              aria-label="搜索"
+              aria-label="Search"
             >
               <Search className="w-5 h-5" />
             </button>
@@ -100,7 +100,7 @@ export default function Header({ siteTitle, logo }: HeaderProps) {
               className="flex items-center w-full px-3 py-2 text-gray-600 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors"
             >
               <Search className="w-5 h-5 mr-2" />
-              搜索
+              Search
             </button>
           </div>
         </div>
